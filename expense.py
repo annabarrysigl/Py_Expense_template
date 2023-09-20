@@ -2,7 +2,7 @@ from PyInquirer import prompt
 import csv
 
 all_users = []
-ppl_involved = ['Test1']
+ppl_involved = []
 
 expense_questions = [
     {
