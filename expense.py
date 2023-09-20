@@ -68,7 +68,7 @@ def new_expense(*args):
         fieldnames = ['amount', 'label', 'spender', 'involved']
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
         
-        writer.writerow({'amount': infos['amount'], 'label':infos['label'], 'spender':infos['spender'], 'involved': infos['involved']})
+        writer.writerow({'amount': infos['amount'], 'label':infos['label'], 'spender':infos['spender'], 'involved': ppl['involved']})
         csvfile.close()
 
     return True
