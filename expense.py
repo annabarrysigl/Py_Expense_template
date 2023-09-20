@@ -44,6 +44,26 @@ def new_expense(*args):
         for user in fcc_data:
             all_users.append(''.join(user))
         csvfile.close()
+
+    expense_questions = [
+    {
+        "type":"input",
+        "name":"amount",
+        "message":"New Expense - Amount: ",
+    },
+    {
+        "type":"input",
+        "name":"label",
+        "message":"New Expense - Label: ",
+    },
+    {
+        "type":"list",
+        "name":"spender",
+        "message":"New Expense - Spender: ",
+        'choices' : all_users
+    },
+    ]
+    
     infos = prompt(expense_questions)
 
     # While amount isn't numeric, ask for question again
